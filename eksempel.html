@@ -13,6 +13,7 @@
     <p>Med denne bookmarklet kan du hurtigt kopiere en liste med en klasses elevers navne fra Moodle.</p>
     <p>Træk nedestående link til din bogmærkelinje i din browser.</p>
     <p><a class="bookmarklet btn btn-lg btn-primary" href="javascript:(function()%7Bfor(var%20elever%3D%24(%22%23participants%20tbody%20tr%3Anot(.emptyrow)%20th.c1%22)%2CcopyText%3D%22%22%2Ci%3D0%3Bi%3Celever.length%3Bi%2B%2B)%7Bvar%20newline%3Di%3Celever.length-1%3F%22%5Cn%22%3A%22%22%3BcopyText%2B%3D%24(elever%5Bi%5D).text()%2Bnewline%7Dfunction%20copyTextToClipboard(e)%7Bvar%20t%3Ddocument.createElement(%22textarea%22)%3Bt.value%3De%2Cdocument.body.appendChild(t)%2Ct.focus()%2Ct.select()%3Btry%7Bvar%20o%3Ddocument.execCommand(%22copy%22)%3Balert(%22Kopieringen%20af%20elevliste%20%22%2B(o%3F%22lykkedes%22%3A%22Fejlede%22))%7Dcatch(e)%7Balert(%22Oops%2C%20unable%20to%20copy%22%2Ce)%7Ddocument.body.removeChild(t)%7DcopyTextToClipboard(copyText)%7D)()">Moodle Elevliste</a></p>
+    <p>Klik på linket, når du befinder dig på siden med medlemmer at kurset. Så bliver en liste medlemmernes navne kopieret til udklipsholderen. <br> Navnene vises med et navn pr. linje.</p>
 </div>
 </body>
 </html>
