@@ -6,13 +6,13 @@ Dette projekt indeholder en bookmarklet til at udtrække fornavn og initialet af
 
 1. Gå til Moodle-deltagerlisten på den relevante kursusside.
 2. Marker de ønskede elever ved at sætte kryds i deres checkbokse.
-3. Klik på bookmarkleten, eller træk den til din bogmærkelinje for nem adgang.
+3. Træk linket nedenfor til din bogmærkelinje for nem adgang.
 
 ### Bookmarklet
 
-Du kan trække knappen nedenfor til din bogmærkelinje for at tilføje bookmarkleten:
+Træk følgende link til din bogmærkelinje:
 
-[![Udtræk brugerliste](https://img.shields.io/badge/Udtræk-brugerliste-blue?style=flat-square)](javascript:(function()%7Bvar%20elever%3Ddocument.querySelectorAll(%22%23participants%20tbody%20tr%3Anot(.emptyrow)%22)%2CcopyText%3D%22%22%2CselectedCount%3D0%3Bfunction%20copyTextToClipboard(e)%7Bvar%20t%3Ddocument.createElement(%22textarea%22)%3Bt.value%3De%2Cdocument.body.appendChild(t)%2Ct.focus()%2Ct.select()%3Btry%7Bvar%20o%3Ddocument.execCommand(%22copy%22)%3Balert(%22Kopieringen%20af%20elevnavne%20%22%2B(o%3F%22lykkedes%22%3A%22fejlede%22))%7Dcatch(r)%7Balert(%22Oops%2C%20kunne%20ikke%20kopiere%22%2Cr)%7Ddocument.body.removeChild(t)%7Delever.forEach(e%3D%3E%7Bvar%20t%3De.querySelector('input%5Btype%3D%22checkbox%22%5D')%3Bif(t%26%26t.checked)%7Bvar%20o%2Cr%2Cc%2Cl%2Cn%3De.querySelector(%22th.c1%20a%20span%22).getAttribute(%22title%22).trim().split(%22%20%22)%3BcopyText%2B%3D%60%24%7Bn%5B0%5D%7D%20%24%7Bn%5Bn.length-1%5D%5B0%5D%7D.%60%2CselectedCount%2B%2B%7D%7D)%2CcopyText%3DcopyText.trim()%2C0%3D%3D%3DselectedCount%3Falert(%22Ingen%20elever%20er%20markeret.%20V%5Cxe6lg%20mindst%20%5Cxe9n%20elev%20for%20at%20forts%5Cxe6tte.%22)%3AcopyTextToClipboard(copyText)%7D)())
+[Udtræk brugerliste](javascript:(function()%7Bvar%20elever%3Ddocument.querySelectorAll(%22%23participants%20tbody%20tr%3Anot(.emptyrow)%22)%2CcopyText%3D%22%22%2CselectedCount%3D0%3Bfunction%20copyTextToClipboard(e)%7Bvar%20t%3Ddocument.createElement(%22textarea%22)%3Bt.value%3De%2Cdocument.body.appendChild(t)%2Ct.focus()%2Ct.select()%3Btry%7Bvar%20o%3Ddocument.execCommand(%22copy%22)%3Balert(%22Kopieringen%20af%20elevnavne%20%22%2B(o%3F%22lykkedes%22%3A%22fejlede%22))%7Dcatch(r)%7Balert(%22Oops%2C%20kunne%20ikke%20kopiere%22%2Cr)%7Ddocument.body.removeChild(t)%7Delever.forEach(e%3D%3E%7Bvar%20t%3De.querySelector('input%5Btype%3D%22checkbox%22%5D')%3Bif(t%26%26t.checked)%7Bvar%20o%2Cr%2Cc%2Cl%2Cn%3De.querySelector(%22th.c1%20a%20span%22).getAttribute(%22title%22).trim().split(%22%20%22)%3BcopyText%2B%3D%60%24%7Bn%5B0%5D%7D%20%24%7Bn%5Bn.length-1%5D%5B0%5D%7D.%60%2CselectedCount%2B%2B%7D%7D)%2CcopyText%3DcopyText.trim()%2C0%3D%3D%3DselectedCount%3Falert(%22Ingen%20elever%20er%20markeret.%20V%5Cxe6lg%20mindst%20%5Cxe9n%20elev%20for%20at%20forts%5Cxe6tte.%22)%3AcopyTextToClipboard(copyText)%7D)())
 
 ### Funktionalitet
 
