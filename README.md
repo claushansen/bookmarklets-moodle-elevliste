@@ -4,7 +4,7 @@ Denne bookmarklet giver dig mulighed for at udtrække en liste over elever fra e
 
 ## Installation
 
-1. Åbn eksempelsiden ved at åbne `bookmarklet.html` i en browser.
+1. Åbn eksempelsiden ved at åbne `eksempel.html` i en browser.
 2. På siden finder du:
    - En knap, der kan trækkes direkte til bogmærkelinjen.
    - Et tekstfelt med koden, som du kan kopiere for at oprette et bogmærke manuelt.
